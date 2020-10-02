@@ -1,0 +1,80 @@
+html {
+    background-color: black;
+    font-family: monospace;
+}
+
+h1, p, a, .name {
+    color: rgb(31.4%, 42.7%, 31.4%);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    margin-left: 3em;
+    margin-top: 4em;
+    margin-bottom: 10px;
+}
+
+p {
+    overflow-wrap: break-word;
+    display: block;
+    margin-left: 14em;
+    margin-right: 23em;
+    font-size: 15px;
+}
+
+.name {
+    font-size: 25px;
+    text-align: center ;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+li {
+    padding: 8px 0;
+    position: relative;
+}
+
+main {
+    float: left;
+    width: 80%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+aside {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-right: solid 1px #222;
+    line-height: 1.5;
+    text-align: left;
+    padding: 40px 30px 40px 40px;
+}
+
+.pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+   width: auto;
+   height: 100%; 
+   margin-left: -40px;
+}
