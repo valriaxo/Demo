@@ -4,7 +4,8 @@ html {
 }
 
 h1, p, a, .name {
-    color:antiquewhite;
+    color: antiquewhite;
+}
 
 h1 {
     text-transform: uppercase;
