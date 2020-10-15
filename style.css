@@ -1,42 +1,57 @@
 html {
     background-color: black;
     font-family: monospace;
+    scroll-behavior: smooth;
 }
 
-h1, p, a, .name {
+
+
+/*--------------------- Text -----------------------*/
+
+h1, h2, h3, h4, p, a, .name {
     color: antiquewhite;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 70px;
-    margin-left: 3em;
-    margin-top: 4em;
-    margin-bottom: 10px;
-    color: rgb(120, 198, 243);
-}
-
-p {
-    overflow-wrap: break-word;
-    display: block;
-    margin-left: 14em;
-    margin-right: 23em;
-    font-size: 15px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 22px;
-    line-height: 1.5em;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.name {
+h2 {
     font-size: 25px;
     text-align: center ;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*------------ Navbar --------------*/
+
+aside {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    box-sizing: border-box;
+    line-height: 1.5;
+    text-align: left;
+    padding: 10px;
+    padding-right: 15px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 13px rgb(204, 168, 252);
+}
+
+img {
+   width: auto;
+   height: 150px; 
+}
+
+nav {
+    margin-top: 4em;
 }
 
 nav ul {
@@ -49,35 +64,216 @@ li {
     position: relative;
 }
 
+a {
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(120, 198, 243);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    box-shadow: 0px 0px 5px rgb(204, 168, 252);
+  }
+
+nav li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+.social {
+    display: flex;
+    margin-top: 15em;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 270px;
+}
+
+.social img{
+    height: auto;
+    width: 30px;
+}
+
+aside p {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+}
+
+/* ----------- Home ----------- */
+
 main {
+    height: 100vh;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-right: solid 1px violet;
+    border-left: solid 1px violet;
+    border-bottom: solid 1px violet;
+    justify-content: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    margin-left: 4em;
+    margin-bottom: 10px;
+    color: rgb(120, 198, 243);
+    text-shadow: 1px 1px 8px rgb(204, 168, 252);
+}
+
+p {
+    margin-left: 19em;
+    font-size: 15px;
+    text-transform: none;
+    width: 600px;
+}
+
+main a {
+    width: 160px;
+    margin-left: 16.7em;
+    margin-top: 1em;
+    padding: 15px;
+    border: none;
+    color: antiquewhite;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid 1px rgb(120, 198, 243);
+    transition-duration: 0.4s;
+}
+
+main a:hover {
+    background-color: rgb(120, 198, 243);
+    border: solid 1px rgb(204, 168, 252);
+    text-shadow: 0px 0px 16px black;
+}
+
+/* ------------- Content ------------- */
+
+#about, #exp, #port, #credit {
     float: left;
+    height: 100vh;
+    margin-left: 20%;
+    box-sizing: border-box;
     width: 80%;
-    height: 100vh;
-    box-sizing: border-box;
 }
 
-aside {
-    float: left;
-    width: 20%;
-    height: 100vh;
-    
-    box-sizing: border-box;
-    border-right: solid 1px #222;
-    line-height: 1.5;
-    text-align: left;
-    padding: 40px 30px 40px 35px;
+/* --------------- About ---------------- */
+
+#about {
+    border: solid 1px violet;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 30px;
+#about p {
+    font-size: 17px;
+    text-align: left;  
+    margin-left: 17em;  
 }
 
-img {
-   width: auto;
-   height: 100%; 
-   margin-left: -40px;
+/* ---------- Experience ---------- */
+
+#exp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid 1px violet;
 }
+
+#edu, #work {
+    margin-top: 13em;
+}
+
+#edu {
+    margin-right: 2em;
+}
+
+#work {
+    margin-left: 2em;
+}
+
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(120, 198, 243);
+}
+
+h4 {
+    font-size: 18px;
+    color: rgb(204, 168, 252);
+    margin-bottom: 10px;
+}
+
+#edu p, #work p {
+    font-size: 15px;
+    margin-left: 1em;
+    margin-top: 1px;
+    width: 400px;
+    font-style: italic;
+}
+
+
+/* -------------- Portfolio -------------  */
+
+#port {
+    border: solid 1px violet;
+}
+
+#port h2 {
+    color: rgb(120, 198, 243);
+    margin: 2em;
+}
+
+#videos h3 {
+    color: rgb(204, 168, 252);
+    margin-bottom: 1em;
+}
+
+#videos {
+    margin-left: 7em;
+}
+
+#layout {
+    margin-top: 5em;
+}
+
+/* ------------- Credit --------------- */
+
+#credit {
+    border: solid 1px violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#credit a {
+    font-size: 15px;
+    text-decoration: underline;
+    color: rgb(120, 198, 243);
+    text-align: center;
+}
+
+/*----------- Responsive? ----------------*/
+
+@media screen and (max-width: 767px) {
+
+  }
+
+  @media screen and (max-width: 575px) {
+   
+  }
